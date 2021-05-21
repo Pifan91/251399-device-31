@@ -41,6 +41,8 @@
   --special-yellow-dark: #f0c52e;
   --special-yellow-light: #f7e296;
   --status-pink: #f6dada;
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-60: rgba(255, 255, 255, 0.6);
 }
 
 html {
@@ -88,4 +90,9 @@ input[type="radio"].visually-hidden {
 
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
 }
