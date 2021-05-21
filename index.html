@@ -24,13 +24,13 @@
 
         <ul class="user-list">
           <li class="user-list__item">
-            <a class="user-list__link  user-list__link--user" href="#">Войти</a>
+            <a class="user-list__link  user-list__link--user" href="blank.html">Войти</a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link  user-list__link--compare" href="#">Сравнить</a>
+            <a class="user-list__link  user-list__link--compare" href="blank.html">Сравнить</a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link  user-list__link--cart" href="#">Корзина</a>
+            <a class="user-list__link  user-list__link--cart" href="blank.html">Корзина</a>
           </li>
         </ul>
       </div>
@@ -43,14 +43,14 @@
               <li class="navigation__sublist-item">
                 <a class="navigation__sublist-link" href="catalog.html">Виртуальная реальность</a>
                 <a class="navigation__sublist-link" href="catalog.html">Моноподы для селфи</a>
-                <a class="navigation__sublist-link" href="#">Экшн-камеры</a>
+                <a class="navigation__sublist-link" href="blank.html">Экшн-камеры</a>
               </li>
               <li class="navigation__sublist-item">
-                <a class="navigation__sublist-link" href="#">Фитнес-браслеты</a>
-                <a class="navigation__sublist-link" href="#">Умные часы</a>
+                <a class="navigation__sublist-link" href="blank.html">Фитнес-браслеты</a>
+                <a class="navigation__sublist-link" href="blank.html">Умные часы</a>
               </li>
               <li class="navigation__sublist-item">
-                <a class="navigation__sublist-link" href="#">Квадрокоптер</a>
+                <a class="navigation__sublist-link" href="blank.html">Квадрокоптер</a>
               </li>
             </ul>
           </li>
@@ -73,15 +73,24 @@
       <div class="container">
         <h2 class="visually-hidden">Слайдер</h2>
 
-        <ul class="toggle-list">
-          <li class="toggle-list__item">
-            <input class="toggle-list__button" type="radio" name="toggle" id="toggle-1" checked>
+        <ul class="slider-toggle-list">
+          <li class="slider-toggle-list__item">
+            <input class="visually-hidden" type="radio" name="slider-toggle" id="slider-toggle-1" checked>
+            <label class="slider-toggle-list__button" for="slider-toggle-1">
+              <span class="visually-hidden">Слайд 1</span>
+            </label>
           </li>
-          <li class="toggle-list__item">
-            <input class="toggle-list__button" type="radio" name="toggle" id="toggle-2">
+          <li class="slider-toggle-list__item">
+            <input class="visually-hidden" type="radio" name="slider-toggle" id="slider-toggle-2">
+            <label class="slider-toggle-list__button" for="slider-toggle-2">
+              <span class="visually-hidden">Слайд 2</span>
+            </label>
           </li>
-          <li class="toggle-list__item">
-            <input class="toggle-list__button" type="radio" name="toggle" id="toggle-3">
+          <li class="slider-toggle-list__item">
+            <input class="visually-hidden" type="radio" name="slider-toggle" id="slider-toggle-3">
+            <label class="slider-toggle-list__button" for="slider-toggle-3">
+              <span class="visually-hidden">Слайд 3</span>
+            </label>
           </li>
         </ul>
 
@@ -93,7 +102,7 @@
             <div class="slider__item-info">
               <h3 class="slider__item-title">Делай селфи, как Бен Стиллер!</h3>
               <p class="slider__item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-              <a class="button  slider__item-button" href="#">Подробнее</a>
+              <a class="button  slider__item-button" href="blank.html">Подробнее</a>
               <table class="slider__item-table">
                 <tr class="slider__item-table-row">
                   <td class="slider__item-table-cell  slider__item-table-cell--name">Длина палки</td>
@@ -118,7 +127,7 @@
             <div class="slider__item-info">
               <h3 class="slider__item-title">Худеем правильно!</h3>
               <p class="slider__item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-              <a class="button  slider__item-button" href="#">Подробнее</a>
+              <a class="button  slider__item-button" href="blank.html">Подробнее</a>
               <table class="slider__item-table">
                 <tr class="slider__item-table-row">
                   <td class="slider__item-table-cell  slider__item-table-cell--name">Без подзарядки</td>
@@ -135,7 +144,7 @@
             <div class="slider__item-info">
               <h3 class="slider__item-title">Порхает как бабочка, жалит как пчела!</h3>
               <p class="slider__item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-              <a class="button  slider__item-button" href="#">Подробнее</a>
+              <a class="button  slider__item-button" href="blank.html">Подробнее</a>
               <table class="slider__item-table">
                 <tr class="slider__item-table-row">
                   <td class="slider__item-table-cell  slider__item-table-cell--name">Дальность полета</td>
@@ -147,6 +156,86 @@
                 </tr>
               </table>
             </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="container">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <ul class="popular-list">
+          <li class="popular-list__item">
+            <a class="popular-list__item-image" href="blank.html">
+              <img src="https://via.placeholder.com/150x100" alt="Виртуальная реальность">
+            </a>
+            <a href="blank.html" class="popular-list__item-title">Виртуальная реальность</a>
+          </li>
+          <li class="popular-list__item">
+            <a class="popular-list__item-image" href="blank.html">
+              <img src="https://via.placeholder.com/150x100" alt="Моноподы для селфи">
+            </a>
+            <a href="blank.html" class="popular-list__item-title">Моноподы для селфи</a>
+          </li>
+          <li class="popular-list__item">
+            <a class="popular-list__item-image" href="blank.html">
+              <img src="https://via.placeholder.com/150x100" alt="Экшн-камеры">
+            </a>
+            <a href="blank.html" class="popular-list__item-title">Экшн-камеры</a>
+          </li>
+          <li class="popular-list__item">
+            <a class="popular-list__item-image" href="blank.html">
+              <img src="https://via.placeholder.com/150x100" alt="Фитнес-браслеты">
+            </a>
+            <a href="blank.html" class="popular-list__item-title">Фитнес-браслеты</a>
+          </li>
+          <li class="popular-list__item">
+            <a class="popular-list__item-image" href="blank.html">
+              <img src="https://via.placeholder.com/150x100" alt="Умные часы">
+            </a>
+            <a href="blank.html" class="popular-list__item-title">Умные часы</a>
+          </li>
+          <li class="popular-list__item">
+            <a class="popular-list__item-image" href="blank.html">
+              <img src="https://via.placeholder.com/150x100" alt="Квадрокоптеры">
+            </a>
+            <a href="blank.html" class="popular-list__item-title">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container  services__wrapper">
+        <h2 class="visually-hidden">Популярные товары</h2>
+        <ul class="services-toggle-list">
+          <li class="services-toggle-list__item">
+            <input class="visually-hidden" type="radio" name="services-toggle" id="services-toggle-1" checked>
+            <label class="button  services-toggle-list__button" for="services-toggle-1">Доставка</label>
+          </li>
+          <li class="services-toggle-list__item">
+            <input class="visually-hidden" type="radio" name="services-toggle" id="services-toggle-2">
+            <label class="button  services-toggle-list__button" for="services-toggle-2">Гарантия</label>
+          </li>
+          <li class="services-toggle-list__item">
+            <input class="visually-hidden" type="radio" name="services-toggle" id="services-toggle-3">
+            <label class="button  services-toggle-list__button" for="services-toggle-3">Кредит</label>
+          </li>
+        </ul>
+
+        <ul class="services-list">
+          <li class="services-list__item">
+            <h3 class="services-list__item-title">Доставка</h3>
+            <p class="services-list__item-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          </li>
+          <li class="services-list__item">
+            <h3 class="services-list__item-title">Гарантия</h3>
+            <p class="services-list__item-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+          </li>
+          <li class="services-list__item">
+            <h3 class="services-list__item-title">Кредит</h3>
+            <p class="services-list__item-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка,
+              разумеется.</p>
           </li>
         </ul>
       </div>
