@@ -1,0 +1,101 @@
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Open Sans";
+
+  src: local("Open Sans"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Open Sans";
+
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Gilroy";
+
+  src: local("Gilroy"), url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Gilroy";
+
+  src: local("Gilroy"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-gray: #464646;
+  --basic-grey-light: #e5e5e5;
+  --basic-half-gray: #7e7e7e;
+  --basic-white: #ffffff;
+  --special-green: #91c92f;
+  --special-yellow-dark: #f0c52e;
+  --special-yellow-light: #f7e296;
+  --status-pink: #f6dada;
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-60: rgba(255, 255, 255, 0.6);
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+
+  grid-template-rows: auto 1fr auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
