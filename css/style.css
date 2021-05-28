@@ -37,6 +37,8 @@
   --basic-grey-light: #e5e5e5;
   --basic-half-gray: #7e7e7e;
   --basic-white: #ffffff;
+  --black-30: rgba(0, 0, 0, 0.3);
+  --black-60: rgba(0, 0, 0, 0.6);
   --special-green: #91c92f;
   --special-yellow-dark: #f0c52e;
   --special-yellow-light: #f7e296;
@@ -98,4 +100,125 @@ input[type="radio"].visually-hidden {
 .container {
   width: 1160px;
   margin: 0 auto;
+}
+
+.logo {
+  width: 163px;
+  height: 35px;
+}
+
+/*===== MAIN-HEADER =====*/
+
+.main-header {
+  position: relative;
+
+  min-height: 186px;
+  margin-top: 40px;
+  padding: 30px 60px 0 60px;
+
+  background-color: var(--special-yellow-light);
+}
+
+.main-header__logo {
+  position: absolute;
+  top: -20px;
+  left: 60px;
+}
+
+.main-header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*===== SEARCH-FORM =====*/
+
+.search-form {
+  position: relative;
+
+  display: flex;
+  flex-basis: 500px;
+  align-items: stretch;
+  max-width: 500px;
+  min-height: 50px;
+}
+
+.search-form::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/icons/icon-search.svg");
+  transform: translateY(-50%);
+}
+
+.search-form__field {
+  flex-grow: 1;
+  padding: 0 0 0 38px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+
+.search-form__field::placeholder {
+  color: var(--black-30);
+}
+
+.search-form__field:hover::placeholder {
+  color: var(--black-60);
+}
+
+.search-form__field:focus {
+  border-color: var(--basic-black);
+}
+
+.search-form__field:focus::placeholder {
+  color: var(--basic-black);
+}
+
+.search-form__button {
+  display: none;
+  padding: 13px 15px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 2px solid var(--basic-black);
+  cursor: pointer;
+}
+
+.search-form__field:focus + .search-form__button {
+  display: block;
+}
+
+.search-form__button:hover {
+  display: block;
+
+  color: var(--basic-white);
+
+  background-color: var(--basic-black);
+}
+
+.search-form__button:active {
+  color: var(--white-30);
+
+  background-color: var(--basic-black);
 }
