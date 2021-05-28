@@ -107,6 +107,50 @@ input[type="radio"].visually-hidden {
   height: 35px;
 }
 
+/*===== BUTTON =====*/
+
+.button {
+  position: relative;
+
+  padding: 9px 42px;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3.5px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 8px;
+
+  background-color: var(--special-yellow-dark);
+  transform: translateY(-50%);
+}
+
+.button:hover {
+  background-color: var(--special-yellow-dark);
+}
+
+.button:active {
+  color: var(--black-30);
+
+  background-color: var(--special-yellow-dark);
+}
+
 /*===== MAIN-HEADER =====*/
 
 .main-header {
