@@ -420,6 +420,7 @@ input[type="radio"].visually-hidden {
 
 .navigation__sublist {
   position: absolute;
+  z-index: 1;
 
   display: none;
   flex-wrap: wrap;
@@ -467,4 +468,30 @@ input[type="radio"].visually-hidden {
 
 .navigation__sublist-link:active {
   color: var(--black-30);
+}
+
+/*===== SLIDER =====*/
+
+.slider-wrapper {
+  position: relative;
+
+  background-image: linear-gradient(var(--special-yellow-light), var(--special-yellow-light) 114px, transparent 114px, transparent 100%);
+}
+
+.slider-toggle-list {
+  position: absolute;
+  right: 0;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.slider {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
