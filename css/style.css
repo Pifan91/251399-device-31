@@ -107,6 +107,81 @@ input[type="radio"].visually-hidden {
   height: 35px;
 }
 
+/*===== OVERLINE-TITLE =====*/
+
+.overline-title {
+  position: relative;
+}
+
+.overline-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: var(--basic-black);
+}
+
+/*===== DEFAULT PARAGRAPH and LIST =====*/
+
+.default-text {
+  margin: 0 0 40px;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+}
+
+.default-text:last-of-type {
+  margin-bottom: 60px;
+}
+
+.default-text:only-of-type {
+  margin-bottom: 40px;
+}
+
+.default-list {
+  margin: 0;
+  padding-left: 32px;
+
+  list-style: none;
+}
+
+.default-list__item {
+  position: relative;
+
+  margin-bottom: 14px;
+
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-black);
+}
+
+.default-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.default-list__item::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -31px;
+
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid var(--basic-grey-light);
+  border-radius: 50%;
+}
+
 /*===== BUTTON =====*/
 
 .button {
@@ -898,6 +973,10 @@ input[type="radio"].visually-hidden {
 
 /*===== LOGOTYPES =====*/
 
+.logotypes {
+  margin-bottom: 83px;
+}
+
 .logotypes-list {
   display: flex;
   flex-wrap: wrap;
@@ -922,4 +1001,62 @@ input[type="radio"].visually-hidden {
 .logotypes-list__image {
   width: 260px;
   height: 100px;
+}
+
+/*===== INFORMATION =====*/
+
+.information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto 77px;
+}
+
+/*===== ABOUT-US and CONTACTS =====*/
+
+.about-us {
+  flex-basis: 560px;
+  max-width: 560px;
+  padding: 0 85px 0 0;
+}
+
+.contacts {
+  flex-basis: 560px;
+  max-width: 560px;
+}
+
+.about-us__title,
+.contacts__title {
+  margin: 0 0 40px;
+  padding: 57px 0 0 0;
+
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-black);
+  letter-spacing: 0.2em;
+}
+
+.about-us__button,
+.contacts__button {
+  min-width: 260px;
+  margin: 70px 0 0 0;
+}
+
+/*===== MAP =====*/
+
+.map {
+  margin: 0 0 7px;
+}
+
+.map,
+.map__picture {
+  width: 560px;
+  height: 222px;
+}
+
+.popup {
+  display: none;
 }
