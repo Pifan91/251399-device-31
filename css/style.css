@@ -477,7 +477,7 @@ input[type="radio"].visually-hidden {
 .slider-wrapper {
   position: relative;
 
-  margin-top: -15px;
+  margin: -15px auto 55px;
   overflow-x: hidden;
 
   background-image: linear-gradient(var(--special-yellow-light), var(--special-yellow-light) 129px, transparent 129px, transparent 100%);
@@ -653,4 +653,106 @@ input[type="radio"].visually-hidden {
 
   font-size: 36px;
   line-height: 42px;
+}
+
+/*===== POPULAR =====*/
+
+.popular {
+  margin-bottom: 50px;
+}
+
+.popular-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  column-gap: 40px;
+}
+
+.popular-list__item {
+  width: 160px;
+
+  line-height: 22px;
+}
+
+.popular-list__item-name {
+  position: relative;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.popular-list__item-name::before {
+  content: "";
+
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin-bottom: 40px;
+
+  background-color: var(--special-yellow-light);
+}
+
+.popular-list__item-name::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 160px;
+  height: 160px;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.popular-list__item-name--vr::after {
+  background-image: url("../img/vr.svg");
+}
+
+.popular-list__item-name--monopod::after {
+  background-image: url("../img/monopod.svg");
+}
+
+.popular-list__item-name--camera::after {
+  background-image: url("../img/camera.svg");
+}
+
+.popular-list__item-name--fitness-bracelet {
+  letter-spacing: normal;
+}
+
+.popular-list__item-name--fitness-bracelet::after {
+  letter-spacing: normal;
+
+  background-image: url("../img/fitness-bracelet.svg");
+}
+
+.popular-list__item-name--smart-clock::after {
+  background-image: url("../img/smart-clock.svg");
+}
+
+.popular-list__item-name--quadrocopters::after {
+  background-image: url("../img/quadrocopters.svg");
+}
+
+.popular-list__item-name:hover::before {
+  background-color: var(--special-yellow-dark);
+}
+
+.popular-list__item-name:active {
+  opacity: 0.3;
+}
+
+.popular-list__item-name:active::before {
+  background-color: var(--special-yellow-dark);
 }
