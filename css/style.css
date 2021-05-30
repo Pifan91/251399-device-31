@@ -683,6 +683,8 @@ input[type="radio"].visually-hidden {
 .popular-list__item-name {
   position: relative;
 
+  display: block;
+
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -763,7 +765,7 @@ input[type="radio"].visually-hidden {
 
 .services {
   min-height: 388px;
-  margin-bottom: 55px;
+  margin-bottom: 90px;
 
   background-image: linear-gradient(transparent, transparent 100px, var(--basic-grey-light) 100px, var(--basic-grey-light) 100%);
 }
@@ -892,4 +894,32 @@ input[type="radio"].visually-hidden {
 
 .services-list__item-description:last-child {
   margin: 0;
+}
+
+/*===== LOGOTYPES =====*/
+
+.logotypes-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 40px;
+}
+
+.logotypes-list__item {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.logotypes-list__item:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.logotypes-list__image {
+  width: 260px;
+  height: 100px;
 }
