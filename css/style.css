@@ -41,6 +41,7 @@
   --black-60: rgba(0, 0, 0, 0.6);
   --special-green: #91c92f;
   --special-yellow-dark: #f0c52e;
+  --special-yellow-darked: #ffc600;
   --special-yellow-light: #f7e296;
   --status-pink: #f6dada;
   --white-30: rgba(255, 255, 255, 0.3);
@@ -354,6 +355,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 
@@ -483,6 +485,7 @@ input[type="radio"].visually-hidden {
 .navigation__list {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 
@@ -548,6 +551,7 @@ input[type="radio"].visually-hidden {
 
   display: none;
   flex-wrap: wrap;
+  align-items: flex-start;
   width: 1160px;
   margin: 0 -60px;
   padding: 28px 60px 40px;
@@ -564,6 +568,7 @@ input[type="radio"].visually-hidden {
 .navigation__sublist-item {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-right: 63px;
 }
 
@@ -611,6 +616,7 @@ input[type="radio"].visually-hidden {
   right: 88px;
 
   display: flex;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 
@@ -659,6 +665,7 @@ input[type="radio"].visually-hidden {
 
 .slider {
   display: flex;
+  align-items: flex-start;
   width: 300%;
   margin: 0;
   padding: 0;
@@ -671,6 +678,7 @@ input[type="radio"].visually-hidden {
 .slider__item {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -746,11 +754,13 @@ input[type="radio"].visually-hidden {
 
 .slider__item-table tbody {
   display: flex;
+  align-items: flex-start;
 }
 
 .slider__item-table-row {
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-start;
   margin-right: 59px;
 }
 
@@ -1025,6 +1035,7 @@ input[type="radio"].visually-hidden {
 .logotypes-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 
@@ -1103,7 +1114,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer {
-  padding: 40px 0 0 0;
+  padding: 40px 0 62px;
 
   background-color: var(--basic-dark);
 }
@@ -1111,6 +1122,142 @@ input[type="radio"].visually-hidden {
 .main-footer__top {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 0 40px;
+}
+
+.main-footer__logo {
+  margin: 23px 0 0;
+}
+
+.main-footer__middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 0 50px;
+}
+
+.main-footer__contacts {
+  margin: 0;
+  padding: 0;
+
+  line-height: 20px;
+  color: var(--basic-white);
+}
+
+.main-footer__navigation {
+  display: flex;
+  flex-basis: 480px;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-footer__navigation-item {
+  margin-right: 33px;
+
+  line-height: 22px;
+}
+
+.main-footer__navigation-item:last-child {
+  margin-right: 0;
+}
+
+.main-footer__navigation-link {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+}
+
+.main-footer__navigation-link:hover {
+  color: var(--white-60);
+}
+
+.main-footer__navigation-link:active {
+  color: var(--white-30);
+}
+
+.main-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-footer__bottom::before {
+  content: "";
+
+  width: 80px;
+  height: 7px;
+  margin-top: 10px;
+
+  background-color: var(--special-yellow-darked);
+}
+
+.social-list {
+  display: flex;
+  flex-basis: 170px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-list__item {
+  margin-right: 20px;
+}
+
+.social-list__item:last-child {
+  margin-right: 0;
+}
+
+.social-list__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  opacity: 0.3;
+}
+
+.social-list__link:hover {
+  opacity: 0.6;
+}
+
+.social-list__link:active {
+  opacity: 0.1;
+}
+
+.social-list__link--facebook {
+  background-image: url("../img/icons/icon-facebook.svg");
+}
+
+.social-list__link--instagram {
+  background-image: url("../img/icons/icon-instagram.svg");
+}
+
+.social-list__link--twitter {
+  background-image: url("../img/icons/icon-twitter.svg");
+}
+
+.author {
+  width: 115px;
+  height: 33px;
+}
+
+.author:hover {
+  opacity: 0.6;
+}
+
+.author:active {
+  opacity: 0.3;
 }
 
 .popup {
