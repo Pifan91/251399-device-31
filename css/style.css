@@ -45,6 +45,7 @@
   --status-pink: #f6dada;
   --white-30: rgba(255, 255, 255, 0.3);
   --white-60: rgba(255, 255, 255, 0.6);
+  --white-70: rgba(255, 255, 255, 0.7);
 }
 
 html {
@@ -351,8 +352,8 @@ input[type="radio"].visually-hidden {
 
 .user-list {
   display: flex;
-  flex-basis: 500px;
   flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 
@@ -361,6 +362,10 @@ input[type="radio"].visually-hidden {
 
 .user-list__item {
   margin-right: 40px;
+}
+
+.main-header__user-list {
+  flex-basis: 500px;
 }
 
 .main-header__user-list .user-list__item:nth-last-child(2) {
@@ -385,18 +390,18 @@ input[type="radio"].visually-hidden {
 }
 
 .user-list__link:hover {
-  color: var(--black-60);
+  opacity: 0.6;
 }
 
 .user-list__link:active {
-  color: var(--black-30);
+  opacity: 0.3;
 }
 
 .user-list__link--logout {
   margin-left: -20px;
   padding-left: 0;
 
-  color: var(--black-30);
+  opacity: 0.3;
 }
 
 .user-list__link::before {
@@ -427,6 +432,46 @@ input[type="radio"].visually-hidden {
   height: 10px;
 
   background-image: url("../img/icons/icon-cart.svg");
+}
+
+/*===== USER-LIST с белым текстом в футере =====*/
+
+.user-list--white .user-list__link {
+  color: var(--white-70);
+
+  opacity: 1;
+}
+
+.user-list--white .user-list__link:hover {
+  color: var(--basic-white);
+
+  opacity: 1;
+}
+
+.user-list--white .user-list__link:active {
+  color: var(--white-30);
+
+  opacity: 1;
+}
+
+.user-list--white .user-list__link--user::before {
+  background-image: url("../img/icons/icon-user-yellow.svg");
+}
+
+.user-list--white .user-list__link--compare::before {
+  background-image: url("../img/icons/icon-chart-yellow.svg");
+}
+
+.user-list--white .user-list__link--cart::before {
+  background-image: url("../img/icons/icon-cart-yellow.svg");
+}
+
+.user-list--white .user-list__link:hover::before {
+  opacity: 0.6;
+}
+
+.user-list--white .user-list__link:active::before {
+  opacity: 0.3;
 }
 
 /*===== NAVIGATION =====*/
@@ -1055,6 +1100,17 @@ input[type="radio"].visually-hidden {
 .map__picture {
   width: 560px;
   height: 222px;
+}
+
+.main-footer {
+  padding: 40px 0 0 0;
+
+  background-color: var(--basic-dark);
+}
+
+.main-footer__top {
+  display: flex;
+  justify-content: space-between;
 }
 
 .popup {
