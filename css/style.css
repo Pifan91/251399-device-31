@@ -515,13 +515,16 @@ input[type="radio"].visually-hidden {
   margin-right: 38px;
 }
 
-.navigation__list__item:first-child {
+.navigation__list__item--m-r-auto {
   margin-right: auto;
 }
 
-.navigation__list__item:last-child {
+.navigation__list__item--m-r-0 {
   margin-right: 0;
-  margin-left: 65px;
+}
+
+.navigation__list__item--m-r-103 {
+  margin-right: 103px;
 }
 
 .navigation__list__link {
