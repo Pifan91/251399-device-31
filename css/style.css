@@ -384,20 +384,16 @@ input[type="radio"].visually-hidden {
   margin-right: 40px;
 }
 
-.main-header__user-list .user-list__item:first-child {
+.user-list__item--m-r-auto {
   margin-right: auto;
 }
 
-.user-list__item:last-child {
+.user-list__item--m-r-0 {
   margin-right: 0;
 }
 
-.user-list--authorized .user-list__item:first-child {
+.user-list__item--m-r-20 {
   margin-right: 20px;
-}
-
-.user-list--authorized .user-list__item--logout {
-  margin-right: auto;
 }
 
 .user-list__link {
