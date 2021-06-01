@@ -384,12 +384,12 @@ input[type="radio"].visually-hidden {
   margin-right: 40px;
 }
 
-.user-list__item--m-r-auto {
-  margin-right: auto;
+.user-list__item:last-child {
+  margin-right: 0;
 }
 
-.user-list__item--m-r-0 {
-  margin-right: 0;
+.user-list__item--m-r-auto {
+  margin-right: auto;
 }
 
 .user-list__item--m-r-20 {
@@ -515,12 +515,12 @@ input[type="radio"].visually-hidden {
   margin-right: 38px;
 }
 
-.navigation-list__item--m-r-auto {
-  margin-right: auto;
+.navigation-list__item:last-child {
+  margin-right: 0;
 }
 
-.navigation-list__item--m-r-0 {
-  margin-right: 0;
+.navigation-list__item--m-r-auto {
+  margin-right: auto;
 }
 
 .navigation-list__item--m-r-103 {
