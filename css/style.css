@@ -1088,24 +1088,18 @@ input[type="radio"].visually-hidden {
 /*===== INFORMATION =====*/
 
 .information {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
   margin: 0 auto 77px;
+
+  column-gap: 40px;
+
+  grid-template-columns: repeat(2, 560px);
 }
 
 /*===== ABOUT-US and CONTACTS =====*/
 
 .about-us {
-  flex-basis: 560px;
-  max-width: 560px;
   padding: 0 85px 0 0;
-}
-
-.contacts {
-  flex-basis: 560px;
-  max-width: 560px;
 }
 
 .about-us__title,
@@ -1133,8 +1127,8 @@ input[type="radio"].visually-hidden {
   margin: 0 0 7px;
 }
 
-.map,
 .map__picture {
+  display: block;
   width: 560px;
   height: 222px;
 }
