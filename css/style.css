@@ -1734,3 +1734,128 @@ input[type="radio"].visually-hidden {
 
   background-image: url("../img/icons/icon-down-arrow.svg");
 }
+
+/*===== PRODUCT-LIST =====*/
+
+.product-list {
+  display: grid;
+  margin: 0;
+  padding: 69px 0 0 73px;
+
+  list-style: none;
+  column-gap: 40px;
+
+  grid-template-columns: repeat(2, 360px);
+  row-gap: 48px;
+}
+
+.product-list__item {
+  position: relative;
+}
+
+.product-list__item--new::before {
+  content: "new";
+  position: absolute;
+  top: 30px;
+  right: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--black-30);
+  text-transform: uppercase;
+
+  border: 2px solid var(--black-30);
+  border-radius: 50%;
+}
+
+.product-list__item-picture {
+  width: 360px;
+  height: 380px;
+  margin-bottom: 23px;
+}
+
+.product-list__item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product-list__item-name {
+  flex-basis: 270px;
+
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.product-list__item-price {
+  flex-basis: 81px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.product-list__item-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 380px;
+
+  background-color: var(--white-70);
+}
+
+.product-list__item:hover .product-list__item-hover {
+  display: flex;
+}
+
+.product-list__item-button {
+  min-width: 200px;
+  margin-top: 35px;
+}
+
+.product-list__item-link {
+  display: block;
+  margin-top: 15px;
+
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+
+  opacity: 0.5;
+}
+
+.product-list__item-link:hover {
+  opacity: 1;
+}
+
+.product-list__item-link:active {
+  opacity: 0.2;
+}
