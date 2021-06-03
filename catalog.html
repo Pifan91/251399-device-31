@@ -110,21 +110,23 @@
       </ul>
     </header>
 
-    <div class="container">
-      <section class="filter">
-        <h2 class="filter__title">Фильтр:</h2>
+    <div class="catalog-container container">
+      <section class="filter catalog-container__filter">
+        <h2 class="filter__title catalog-container__filter-title">Фильтр:</h2>
 
         <form class="filter__form" action="https://echo.htmlacademy.ru/" method="POST">
           <fieldset class="filter__form-fieldset">
             <legend class="filter__form-legend">Стоимость</legend>
 
             <div class="price-range">
-              <button class="price-range__button price-range__button--min" type="button">
-                <span class="visually-hidden">Минимальная цена</span>
-              </button>
-              <button class="price-range__button price-range__button--max" type="button">
-                <span class="visually-hidden">Максимальная цена</span>
-              </button>
+              <div class="price-range__scale">
+                <button class="price-range__button price-range__button--min" type="button">
+                  <span class="visually-hidden">Минимальная цена</span>
+                </button>
+                <button class="price-range__button price-range__button--max" type="button">
+                  <span class="visually-hidden">Максимальная цена</span>
+                </button>
+              </div>
             </div>
           </fieldset>
 
@@ -175,8 +177,8 @@
       </section>
 
       <div class="catalog">
-        <section class="sorting">
-          <h2 class="sorting__title">Сортировка</h2>
+        <section class="sorting catalog-container__sorting">
+          <h2 class="sorting__title">Сортировка:</h2>
           <ul class="sorting__list">
             <li class="sorting__list-item">
               <a class="sorting__list-link sorting__list-link--active" href="#">
@@ -240,7 +242,7 @@
               <a class="product-list__item-link" href="blank.html"></a>
             </div>
           </li>
-          <li class="product-list__item">
+          <li class="product-list__item product-list__item--new">
             <img class="product-list__item-picture" src="img/product4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <div class="product-list__item-info">
               <a class="product-list__item-name" href="blank.html">Селфи-палка «Следуй за мной»</a>
