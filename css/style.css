@@ -1487,6 +1487,24 @@ input[type="radio"].visually-hidden {
   background-position: center;
 }
 
+.filter__form-checkbox:hover + .filter__form-label--checkbox::before,
+.filter__form-checkbox:hover + .filter__form-label--checkbox::after,
+.filter__form-checkbox:focus + .filter__form-label--checkbox::before,
+.filter__form-checkbox:focus + .filter__form-label--checkbox::after {
+  opacity: 0.6;
+}
+
+.filter__form-checkbox:active + .filter__form-label--checkbox::before,
+.filter__form-checkbox:active + .filter__form-label--checkbox::after {
+  opacity: 1;
+}
+
+.filter__form-checkbox:disabled + .filter__form-label--checkbox,
+.filter__form-checkbox:disabled + .filter__form-label--checkbox::before,
+.filter__form-checkbox:disabled + .filter__form-label--checkbox::after {
+  opacity: 0.25;
+}
+
 .filter__form-label--radio::before {
   content: "";
   position: absolute;
@@ -1511,6 +1529,24 @@ input[type="radio"].visually-hidden {
 
   background-color: var(--basic-black);
   border-radius: 50%;
+}
+
+.filter__form-radio:hover + .filter__form-label--radio::before,
+.filter__form-radio:hover + .filter__form-label--radio::after,
+.filter__form-radio:focus + .filter__form-label--radio::before,
+.filter__form-radio:focus + .filter__form-label--radio::after {
+  opacity: 0.6;
+}
+
+.filter__form-radio:active + .filter__form-label--radio::before,
+.filter__form-radio:active + .filter__form-label--radio::after {
+  opacity: 1;
+}
+
+.filter__form-radio:disabled + .filter__form-label--radio,
+.filter__form-radio:disabled + .filter__form-label--radio::before,
+.filter__form-radio:disabled + .filter__form-label--radio::after {
+  opacity: 0.25;
 }
 
 .filter__form-button {
@@ -1605,6 +1641,8 @@ input[type="radio"].visually-hidden {
   content: "до 5000";
   left: -27px;
 }
+
+/*===== SORTING =====*/
 
 .sorting {
   display: flex;
