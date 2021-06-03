@@ -1417,7 +1417,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   margin: 0;
-  padding: 50px 0 37px;
+  padding: 50px 0 36px;
 
   border: none;
   border-top: 2px solid var(--basic-black);
@@ -1433,6 +1433,87 @@ input[type="radio"].visually-hidden {
   font-family: "Gilroy", "Arial", sans-serif;
   color: var(--basic-black);
   letter-spacing: 0.1em;
+}
+
+.filter__form-list {
+  margin: 0;
+  padding: 10px 0 2px 0;
+
+  list-style: none;
+}
+
+.filter__form-list-item {
+  margin-bottom: 15px;
+
+  line-height: 24px;
+}
+
+.filter__form-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.filter__form-label {
+  position: relative;
+
+  padding: 2px 0 3px 41px;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #000000;
+}
+
+.filter__form-label--checkbox::before,
+.filter__form-label--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+}
+
+.filter__form-label--checkbox::before {
+  border: 2px solid var(--basic-black);
+  border-radius: 2px;
+}
+
+.filter__form-checkbox:checked + .filter__form-label--checkbox::after {
+  background-image: url("../img/icons/icon-check.svg");
+  background-position: center;
+}
+
+.filter__form-label--radio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  border: 2px solid var(--basic-black);
+  border-radius: 50%;
+}
+
+.filter__form-radio:checked + .filter__form-label--radio::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: var(--basic-black);
+  border-radius: 50%;
+}
+
+.filter__form-button {
+  width: 100%;
+  margin-top: 5px;
 }
 
 /*===== PRICE-RANGE =====*/
