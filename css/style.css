@@ -44,6 +44,8 @@
   --shadow-black: rgba(0, 0, 0, 0.18);
   --special-gray: #dcdcdc;
   --special-gray-darked: #c4c4c4;
+  --special-gray-paginator-bg: #ebebeb;
+  --special-gray-paginator-hover: #d9d9d9;
   --special-green: #91c92f;
   --special-yellow-dark: #f0c52e;
   --special-yellow-darked: #ffc600;
@@ -70,6 +72,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
   font-weight: 300;
   font-size: 15px;
@@ -374,15 +377,22 @@ input[type="radio"].visually-hidden {
 
 .user-list {
   display: flex;
-  flex-basis: 500px;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-start;
-  min-width: 500px;
+  max-width: 500px;
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+.main-header__user-list {
+  flex-basis: 500px;
+}
+
+.main-footer__user-list {
+  flex-basis: 478px;
 }
 
 .user-list__item {
@@ -1740,13 +1750,18 @@ input[type="radio"].visually-hidden {
 .product-list {
   display: grid;
   margin: 0;
-  padding: 69px 0 0 73px;
+  padding: 0;
 
   list-style: none;
   column-gap: 40px;
 
   grid-template-columns: repeat(2, 360px);
   row-gap: 48px;
+}
+
+.catalog__product-list {
+  margin: 0 0 38px;
+  padding: 69px 0 0 73px;
 }
 
 .product-list__item {
@@ -1858,4 +1873,73 @@ input[type="radio"].visually-hidden {
 
 .product-list__item-link:active {
   opacity: 0.2;
+}
+
+/*===== PAGINATOR =====*/
+
+.paginator {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  background-color: var(--special-gray-paginator-bg);
+}
+
+.catalog__paginator {
+  margin: 0 0 79px 73px;
+}
+
+.paginator__item {
+  margin-right: 30px;
+}
+
+.paginator__item--prev {
+  margin-right: auto;
+}
+
+.paginator__item--next {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.paginator__item--m-r-0 {
+  margin-right: 0;
+}
+
+.paginator__link {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: var(--black-30);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+.paginator__link--active {
+  color: var(--basic-black);
+}
+
+.paginator__link--prev,
+.paginator__link--next {
+  padding: 25px 30px;
+
+  color: var(--basic-black);
+}
+
+.paginator__link--prev:hover,
+.paginator__link--next:hover {
+  background-color: var(--special-gray-paginator-hover);
+}
+
+.paginator__link--prev:active,
+.paginator__link--next:active {
+  color: var(--black-30);
+
+  background-color: var(--special-gray-paginator-hover);
 }
