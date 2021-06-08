@@ -335,18 +335,24 @@
       </div>
     </div>
   </footer>
+
   <div class="popup">
     <form class="popup-form" action="https://echo.htmlacademy.ru/" method="POST">
-      <label class="popup-form__label" for="popup-name">Ваше имя:</label>
-      <input class="popup-form__input" type="text" name="popup-name" id="popup-name" placeholder="Имя Фамилия">
+      <div class="popup-form__wrapper popup-form__wrapper--name">
+        <label class="popup-form__label" for="popup-name">Ваше имя:</label>
+        <input class="popup-form__input" type="text" name="popup-name" id="popup-name" placeholder="Имя Фамилия">
+      </div>
 
-      <label class="popup-form__label" for="popup-email">Ваш e-mail:</label>
-      <input class="popup-form__input" type="email" name="popup-email" id="popup-email" placeholder="email@example.com">
+      <div class="popup-form__wrapper popup-form__wrapper--email">
+        <label class="popup-form__label" for="popup-email">Ваш e-mail:</label>
+        <input class="popup-form__input" type="email" name="popup-email" id="popup-email" placeholder="email@example.com">
+      </div>
 
-      <label class="popup-form__label" for="popup-comment">Текст письма:</label>
-      <textarea class="popup-form__input popup-form__input--comment" name="popup-comment" id="popup-comment">В свободной форме</textarea>
-
-      <input class="button popup-form__button" type="submit" value="Отправить">
+      <div class="popup-form__wrapper popup-form__wrapper--comment">
+        <label class="popup-form__label" for="popup-comment">Текст письма:</label>
+        <textarea class="popup-form__input popup-form__input--comment" name="popup-comment" id="popup-comment">В свободной форме</textarea>
+      </div>
+      <button class="button popup-form__button" type="submit">Отправить</button>
     </form>
 
     <button class="popup__button" type="button">
