@@ -648,7 +648,7 @@ input[type="radio"].visually-hidden {
 .slider-wrapper {
   position: relative;
 
-  margin: -15px auto 35px;
+  margin: -15px auto 53px;
   overflow-x: hidden;
 
   background-image: linear-gradient(var(--special-yellow-light), var(--special-yellow-light) 129px, transparent 129px, transparent 100%);
@@ -723,13 +723,22 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 1160px;
+  min-height: 550px;
 }
 
 .slider__item-image,
 .slider__item-info {
   flex-basis: 560px;
   max-width: 560px;
+}
+
+.slider__item-image {
+  align-self: center;
+}
+
+.slider__item-image--start {
+  align-self: flex-start;
 }
 
 .slider__item-image img {
@@ -741,13 +750,15 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   margin: 0 0 26px 0;
-  padding: 93px 170px 0 0;
+  padding: 93px 55px 0 0;
 
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
   font-family: "Gilroy", "Arial", sans-serif;
   color: var(--basic-black);
+
+  transform-style: preserve-3d;
 }
 
 .slider__item-title::before {
@@ -775,12 +786,14 @@ input[type="radio"].visually-hidden {
   color: var(--basic-white);
   text-transform: uppercase;
 
+  transform: translateZ(-1px);
+
   counter-increment: slide;
 }
 
 .slider__item-description {
   margin: 0 0 50px 0;
-  padding: 0 75px 0 0;
+  padding: 0 89px 0 0;
 
   font-weight: 300;
   font-size: 15px;
