@@ -244,6 +244,56 @@ input[type="radio"].visually-hidden {
   background-color: var(--special-yellow-dark);
 }
 
+/*===== CLOSE-BUTTON =====*/
+
+.close-button {
+  position: absolute;
+  top: 22px;
+  right: 19px;
+
+  width: 55px;
+  height: 55px;
+  padding: 0;
+
+  background-color: var(--special-yellow-dark);
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.close-button:hover,
+.close-button:focus {
+  opacity: 1;
+}
+
+.close-button:active {
+  opacity: 0.3;
+}
+
+.close-button::before,
+.close-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: var(--basic-white);
+  transform: translate(-50%, -50%);
+}
+
+.close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 /*===== MAIN-HEADER =====*/
 
 .main-header {
@@ -1434,43 +1484,20 @@ input[type="radio"].visually-hidden {
   justify-self: flex-start;
 }
 
-.popup__button {
-  position: absolute;
-  top: 22px;
-  right: 19px;
+/*===== POPUP-MAP =====*/
 
-  width: 55px;
-  height: 55px;
-  padding: 0;
-
-  background-color: var(--special-yellow-dark);
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-  opacity: 0.5;
-}
-
-.popup__button::before,
-.popup__button::after {
-  content: "";
-  position: absolute;
+.popup-map {
+  position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 5;
 
-  width: 24px;
-  height: 2px;
+  display: none;
+  min-width: 960px;
+  min-height: 572px;
 
-  background-color: var(--basic-white);
+  box-shadow: 0 10px 16px var(--shadow-popup);
   transform: translate(-50%, -50%);
-}
-
-.popup__button::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.popup__button::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /*===== INNER-PAGE =====*/
