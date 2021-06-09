@@ -234,7 +234,8 @@ input[type="radio"].visually-hidden {
   transform: translateY(-50%);
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--special-yellow-dark);
 }
 
@@ -1051,6 +1052,7 @@ input[type="radio"].visually-hidden {
 .services-toggle-list__button:active,
 .services-toggle-list__button--checked,
 .services-toggle-list__button--checked:hover,
+.services-toggle-list__button--checked:focus,
 .services-toggle-list__button--checked:active {
   color: var(--special-yellow-light);
 
@@ -1260,12 +1262,15 @@ input[type="radio"].visually-hidden {
 
   line-height: 20px;
   color: var(--basic-white);
+  text-decoration: none;
 }
 
 .main-footer__navigation {
   display: flex;
   flex-basis: 480px;
+  flex-wrap: wrap;
   align-items: flex-start;
+  max-width: 640px;
   margin: 0;
   padding: 0;
 
@@ -1322,8 +1327,10 @@ input[type="radio"].visually-hidden {
 .social-list {
   display: flex;
   flex-basis: 170px;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: flex-start;
+  max-width: 360px;
   margin: 0;
   padding: 0;
 
@@ -1527,6 +1534,7 @@ input[type="radio"].visually-hidden {
 
 .bread-crumbs {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   margin: 0;
@@ -1884,6 +1892,7 @@ input[type="radio"].visually-hidden {
 .sorting__list {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0 5px 0 0;
@@ -2080,6 +2089,7 @@ input[type="radio"].visually-hidden {
 
 .paginator {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 70px;
   margin: 0;
