@@ -1131,7 +1131,7 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: #000000;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.5px;
 }
 
 .services-list__item-description:last-child {
@@ -1186,8 +1186,15 @@ input[type="radio"].visually-hidden {
 
 /*===== ABOUT-US and CONTACTS =====*/
 
+.about-us,
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .about-us {
-  padding: 0 85px 0 0;
+  padding: 0 65px 0 0;
 }
 
 .about-us__title,
@@ -1796,6 +1803,7 @@ input[type="radio"].visually-hidden {
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 2px var(--shadow-black);
+  cursor: pointer;
 }
 
 .price-range__button::before {
