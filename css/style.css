@@ -110,6 +110,12 @@ input[type="radio"].visually-hidden {
   clip-path: inset(100%);
 }
 
+.inner-page {
+  display: grid;
+
+  grid-template-rows: auto 1fr;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
