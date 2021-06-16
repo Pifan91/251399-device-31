@@ -718,6 +718,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 340px;
   right: 88px;
+  z-index: 1;
 
   display: flex;
   align-items: flex-start;
@@ -749,11 +750,11 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.slider-toggle-list__button--checked {
+.slider-toggle-list__button--active {
   cursor: default;
 }
 
-.slider-toggle-list__button--checked::before {
+.slider-toggle-list__button--active::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -770,7 +771,7 @@ input[type="radio"].visually-hidden {
 .slider {
   display: flex;
   align-items: flex-start;
-  width: 300%;
+  min-width: 300%;
   margin: 0;
   padding: 0;
 
@@ -781,6 +782,7 @@ input[type="radio"].visually-hidden {
 
 .slider__item {
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
   align-items: flex-start;
   width: 1160px;
@@ -1412,6 +1414,10 @@ input[type="radio"].visually-hidden {
   transform: translate(-50%, -50%);
 }
 
+.popup--show {
+  display: block;
+}
+
 .popup-form {
   display: grid;
 
@@ -1493,8 +1499,6 @@ input[type="radio"].visually-hidden {
 
 .popup-form__input--comment {
   min-height: 167px;
-
-  border: none;
 }
 
 .popup-form__button {
@@ -1518,6 +1522,10 @@ input[type="radio"].visually-hidden {
 
   box-shadow: 0 10px 16px var(--shadow-popup);
   transform: translate(-50%, -50%);
+}
+
+.popup-map--show {
+  display: block;
 }
 
 /*===== INNER-PAGE =====*/
