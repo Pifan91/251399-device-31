@@ -30,6 +30,88 @@
   src: local("Gilroy"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -55%);
+    opacity: 1;
+
+    animation-timing-function: ease-in;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    transform: translate(-50%, -54%);
+
+    animation-timing-function: ease-in;
+  }
+
+  65% {
+    transform: translate(-50%, -53%);
+
+    animation-timing-function: ease-in;
+  }
+
+  82% {
+    transform: translate(-50%, -52%);
+
+    animation-timing-function: ease-in;
+  }
+
+  93% {
+    transform: translate(-50%, -51%);
+
+    animation-timing-function: ease-in;
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translate(-50%, -50%);
+
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translate(-52%, -50%);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translate(-48%, -50%);
+  }
+
+  80% {
+    transform: translate(-49%, -50%);
+  }
+
+  90% {
+    transform: translate(-51%, -50%);
+  }
+}
+
+
 :root {
   --basic-black: #000000;
   --basic-dark: #363636;
@@ -1416,6 +1498,12 @@ input[type="radio"].visually-hidden {
 
 .popup--show {
   display: block;
+
+  animation: bounce 0.9s both;
+}
+
+.popup--error {
+  animation: shake 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
 .popup-form {
@@ -1491,6 +1579,7 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--special-yellow-light);
 }
 
+.popup-form__input--invalid,
 .popup-form__input:invalid,
 .popup-form__input--comment:invalid {
   background-color: var(--status-pink);
@@ -1526,6 +1615,8 @@ input[type="radio"].visually-hidden {
 
 .popup-map--show {
   display: block;
+
+  animation: bounce 0.9s both;
 }
 
 /*===== INNER-PAGE =====*/

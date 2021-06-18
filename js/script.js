@@ -14,12 +14,25 @@ const servicesTogglesActive = 'services-toggle-list__button--checked';
 //Переменные для popup
 const popupOpenButton = document.getElementById('showPopup');
 const popup = document.querySelector('.popup');
+const popupForm = document.querySelector('.popup-form');
+const popupFormName = document.getElementById('popup-name');
+const popupFormEmail = document.getElementById('popup-email');
 const popupCloseButton = popup.querySelector('.close-button');
 
 //Переменные для popup-map
 const popupMapOpenButton = document.getElementById('showMap');
 const popupMap = document.querySelector('.popup-map');
 const popupMapCloseButton = popupMap.querySelector('.close-button');
+
+let isStorageSupport = true;
+let storage = "";
+
+try {
+  storage = localStorage.getItem("login");
+} catch (err) {
+  isStorageSupport = false;
+}
+
 
 // Задаём ширину слайдера в соответствии с кол-вом слайдов.
 slider.style.width = sliderWidth;
@@ -65,10 +78,22 @@ function changeServices(evt) {
 function popupOpenHandler(evt) {
   evt.preventDefault();
   showPopup(popup, 'popup--show');
+
+  if (storage) {
+    popupFormName.value = storage;
+    popupFormEmail.focus();
+  } else {
+    popupFormName.focus();
+  }
 }
 
 function popupCloseHandler(evt) {
   evt.preventDefault();
+
+  if (popup.classList.contains('popup--error')) {
+    popup.classList.remove('popup--error');
+  }
+
   closePopup(popup, 'popup--show');
 }
 
@@ -92,6 +117,31 @@ function closePopup(popup, classname) {
   popup.classList.remove(classname);
 }
 
+function closePopupWithKey(evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains('popup--show')) {
+      evt.preventDefault();
+      popup.classList.remove('popup--error');
+    } else if (popupMap.classList.contains('popup-map--show')) {
+      evt.preventDefault();
+      popupMap.classList.remove('popup-map--show');
+    }
+  }
+}
+
+function formValidation(evt) {
+  if (!popupFormName.value || !popupFormEmail.value) {
+    evt.preventDefault();
+    popup.classList.remove('popup--error');
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add('popup--error');
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("login", popupFormName.value);
+    }
+  }
+}
+
 setValues(sliderToggles, changeSlide);
 setValues(servicesToggles, changeServices);
 
@@ -100,3 +150,6 @@ popupCloseButton.addEventListener('click', popupCloseHandler);
 
 popupMapOpenButton.addEventListener('click', popupMapOpenHandler);
 popupMapCloseButton.addEventListener('click', popupMapCloseHandler);
+
+popupForm.addEventListener('submit', formValidation)
+window.addEventListener('keydown', closePopupWithKey);
