@@ -739,7 +739,8 @@ input[type="radio"].visually-hidden {
   background-color: var(--special-yellow-light);
 }
 
-.navigation-list__item:hover .navigation-sublist {
+.navigation-list__item:hover .navigation-sublist,
+.navigation-list__item:focus-within .navigation-sublist {
   display: flex;
 }
 
