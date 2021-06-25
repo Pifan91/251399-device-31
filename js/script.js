@@ -25,10 +25,10 @@ const popupMap = document.querySelector('.popup-map');
 const popupMapCloseButton = popupMap.querySelector('.close-button');
 
 let isStorageSupport = true;
-let storage = "";
+let storage = '';
 
 try {
-  storage = localStorage.getItem("login");
+  storage = localStorage.getItem('login');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -54,7 +54,7 @@ function changeSlide(evt) {
     });
 
     evt.target.classList.add(sliderTogglesActive);
-    slider.style.transform = "translateX(-" + (sliderItemWidth * evt.target.value) + "px)";
+    slider.style.transform = 'translateX(-' + (sliderItemWidth * evt.target.value) + 'px)';
   }
 }
 
@@ -137,7 +137,7 @@ function formValidation(evt) {
     popup.classList.add('popup--error');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("login", popupFormName.value);
+      localStorage.setItem('login', popupFormName.value);
     }
   }
 }
