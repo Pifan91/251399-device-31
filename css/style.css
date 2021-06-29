@@ -140,6 +140,7 @@
   --white-30: rgba(255, 255, 255, 0.3);
   --white-60: rgba(255, 255, 255, 0.6);
   --white-70: rgba(255, 255, 255, 0.7);
+  --transparent: transparent;
 }
 
 html {
@@ -305,7 +306,7 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   letter-spacing: 3.5px;
 
-  background-color: transparent;
+  background-color: var(--transparent);
   border: none;
 }
 
@@ -445,7 +446,7 @@ input[type="radio"].visually-hidden {
   font-family: "Open Sans", "Arial", sans-serif;
   color: var(--basic-black);
 
-  background-color: transparent;
+  background-color: var(--transparent);
   border: none;
   outline: none;
 }
@@ -478,7 +479,7 @@ input[type="radio"].visually-hidden {
   color: var(--basic-black);
   text-transform: uppercase;
 
-  background-color: transparent;
+  background-color: var(--transparent);
   border: 2px solid var(--basic-black);
   outline: none;
   cursor: pointer;
@@ -795,7 +796,7 @@ input[type="radio"].visually-hidden {
   margin: -15px auto 53px;
   overflow-x: hidden;
 
-  background-image: linear-gradient(var(--special-yellow-light), var(--special-yellow-light) 129px, transparent 129px, transparent 100%);
+  background-image: linear-gradient(var(--special-yellow-light), var(--special-yellow-light) 129px, var(--transparent) 129px, var(--transparent) 100%);
 }
 
 .slider-toggle-list {
@@ -828,7 +829,7 @@ input[type="radio"].visually-hidden {
   height: 12px;
   padding: 0;
 
-  background-color: transparent;
+  background-color: var(--transparent);
   border: 1px solid var(--basic-black);
   border-radius: 50%;
   cursor: pointer;
@@ -1102,7 +1103,7 @@ input[type="radio"].visually-hidden {
   min-height: 388px;
   margin-bottom: 90px;
 
-  background-image: linear-gradient(transparent, transparent 100px, var(--basic-gray-light) 100px, var(--basic-gray-light) 100%);
+  background-image: linear-gradient(var(--transparent), var(--transparent) 100px, var(--basic-gray-light) 100px, var(--basic-gray-light) 100%);
 }
 
 .services__wrapper {
